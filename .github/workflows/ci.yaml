@@ -1,9 +1,8 @@
 name: Golang Docker Build
 
 on:
-  push:
-    branches:
-      - '**'# LET THE PIPELINE TRIGGER ON A PUSH TO ALL BRANCHES
+  release:
+    types: [released]
 
 env:
   CONTAINER_REPOSITORY: quay.io/johnthesecond # PUT YOUR OWN USERNAME HERE
@@ -12,7 +11,7 @@ env:
 
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestdocker pull quay.io/johnthesecond/alm-workshop:main
     steps:
       - uses: actions/checkout@v4 #work pls
 
