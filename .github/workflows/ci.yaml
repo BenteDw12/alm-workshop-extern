@@ -21,8 +21,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: quay.io
-          username: johnthesecond
-          password: uVkg8-L@hsKi,:2
+          username: johnthesecond+testbot
+          password: YNMA1PLVYNMATPJI2G8XD4RBKJAOCA3MEUQOZZQV84EDAR2E7RH64GJWADPRZONN
 
       - name: Extract metadata (tags, labels) for Docker
         uses: docker/metadata-action@v4
